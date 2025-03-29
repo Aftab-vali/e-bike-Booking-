@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your E-Bike</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <section class="booking-form">
+        <h2>Book Your E-Bike Now</h2>
+        <form action="/book" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number (+91)</label>
+            <input type="text" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*[A-Z])(?=.*[a-z]{2,})(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}">
+
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

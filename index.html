@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donther - Ride the Future, Unleash the Wild</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Inline styles for enhanced customization */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #282828;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar ul li a {
+            color: #ffffff;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            background: url('{{ url_for('static', filename='images/hero-bg.jpg') }}') no-repeat center center/cover;
+            padding: 150px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero .btn {
+            background-color: #ffcc00;
+            color: #121212;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 60px; /* Adjusted margin-top to move the button down */
+        }
+
+        .hero .btn:hover {
+            background-color: #e6b800;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .content p, .content ul {
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 15px;
+        }
+
+        .content ul li::before {
+            content: "✔";
+            color: #ffcc00;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .gallery-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-images img {
+            width: 300px;
+            border: 2px solid #ffcc00;
+            transition: transform 0.3s;
+        }
+
+        .gallery-images img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #282828;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #ffffff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Donther Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#compare">Why Donther?</a></li>
+                    <li><a href="/book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Donther – Ride the Future, Unleash the Wild</h1>
+        <p>At Donther, we’re redefining the world of electric biking. Our commitment is to deliver a cutting-edge e-bike that not only meets but exceeds the expectations of the modern rider. Whether you’re a city commuter, a performance enthusiast, or an adventure seeker, Donther is engineered to offer an unparalleled riding experience that combines power, efficiency, and style.</p>
+        <p>.</p>
+        <a href="/book" class="btn">Book Now</a>
+    </section>
+
+    <section id="features">
+        <h2>The Power to Go the Distance</h2>
+        <div class="content">
+            <p>Gone are the days of worrying about how far you can travel on a single charge. Donther redefines range with an impressive capability of 400-500 km per full charge. Our innovative battery technology ensures you can embark on extended journeys without the constant need to recharge. Whether you’re navigating urban landscapes or exploring scenic routes, Donther’s long-lasting battery gives you the freedom to ride further and with confidence.</p>
+        </div>
+
+        <h2>World’s Fastest E-Bike – Unleash the Speed</h2>
+        <div class="content">
+            <p>Feel the rush with Donther, the world’s fastest e-bike. Engineered for speed and agility, Donther reaches top speeds of 140 km/h in eco mode – perfect for efficient cruising – and an exhilarating 180 km/h in sport mode for those who crave adrenaline. Our advanced motor and aerodynamic design ensure that every ride is not just fast but thrillingly dynamic. Embrace the thrill of speed and experience a new level of excitement with Donther.</p>
+        </div>
+
+        <h2>Intelligent Safety & Performance Features</h2>
+        <div class="content">
+            <p>Donther is not just about speed and range; it’s also about smart, reliable safety features. Our e-bike is equipped with state-of-the-art auto temperature control technology. This system continuously monitors and regulates the bike’s temperature to prevent overheating. If temperatures exceed safe levels, the system automatically adjusts or powers down to protect both the rider and the bike. Additionally, our Anti-lock Braking System (ABS) ensures that you maintain control and stability even in sudden stops or adverse conditions, giving you a safer and more secure ride.</p>
+        </div>
+
+        <h2>An Iconic Design That Commands Attention</h2>
+        <div class="content">
+            <p>At Donther, we believe that performance and design go hand in hand. Our e-bike features a unique, striking design that combines sleek aesthetics with superior aerodynamics. Each curve and detail is crafted not just for visual appeal but also for enhanced performance and efficiency. With bold lines and an aggressive stance, Donther is designed to turn heads and make a statement. It’s not just a bike; it’s a work of art on wheels.</p>
+        </div>
+
+        <h2>The Ultimate Riding Experience</h2>
+        <div class="content">
+            <p>Donther offers more than just exceptional performance; it provides a comprehensive riding experience. Our e-bike includes a range of premium features designed to enhance your journey. The ergonomic design ensures maximum comfort, even on long rides, while the cutting-edge digital interface provides real-time statistics and control at your fingertips. Every aspect of Donther is meticulously engineered to deliver a smooth, responsive, and immersive riding experience that keeps you connected and in control.</p>
+        </div>
+
+        <h2>Why Donther?</h2>
+        <div class="content">
+            <p>Choosing Donther means opting for the pinnacle of electric biking. Here’s why our e-bike stands out in a crowded market:</p>
+            <ul>
+                <li><strong>Innovation at its Core:</strong> At Donther, we’re dedicated to pushing the boundaries of what’s possible with electric bikes. Our e-bike incorporates the latest advancements in technology, ensuring that you benefit from the most sophisticated and reliable features available.</li>
+                <li><strong>Uncompromising Quality:</strong> Quality is our cornerstone. Each Donther e-bike undergoes rigorous testing and is built with premium materials to ensure durability and reliability. We take pride in crafting products that not only meet but exceed industry standards.</li>
+                <li><strong>Design That Inspires:</strong> Our unique design philosophy is about more than aesthetics; it’s about creating a bike that inspires and excites. The striking design of Donther reflects our commitment to blending form and function, making every ride a visually stunning experience.</li>
+                <li><strong>Customer-Centric Approach:</strong> We are dedicated to providing exceptional support and service. Our knowledgeable team is here to assist with any inquiries or needs, ensuring that your experience with Donther is seamless and satisfying.</li>
+                <li><strong>Commitment to Sustainability:</strong> We’re committed to making a positive impact on the environment. Donther is designed with sustainability in mind, offering a high-performance, eco-friendly alternative to traditional transportation.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="book-now">
+        <a href="/book" class="btn">Book Now</a>
+    </section>
+
+    <section class="gallery">
+        <h2>Our Models</h2>
+        <div class="gallery-images">
+            <img src="{{ url_for('static', filename='images/model1.png') }}" alt="Model 1">
+            <img src="{{ url_for('static', filename='images/model2.png') }}" alt="Model 2">
+            <img src="{{ url_for('static', filename='images/model3.png') }}" alt="Model 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Donther Inc. All rights reserved.</p>
+    </footer>
+<script>
+        window.addEventListener('scroll', function () {
+    let scrollPosition = window.scrollY;
+    let blurBg = document.getElementById('blur-bg');
+
+    if (blurBg) {
+        blurBg.style.opacity = scrollPosition > 100 ? '1' : '0';
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let button = document.querySelector(".btn");
+    if (button) {
+        button.addEventListener("mouseover", function () {
+            button.style.boxShadow = "0px 0px 15px #ffcc00";
+        });
+        button.addEventListener("mouseleave", function () {
+            button.style.boxShadow = "none";
+        });
+    }
+
+    let navLinks = document.querySelectorAll(".navbar ul li a");
+    navLinks.forEach(link => {
+        link.addEventListener("mouseover", function () {
+            link.style.transform = "scale(1.1)";
+        });
+        link.addEventListener("mouseleave", function () {
+            link.style.transform = "scale(1)";
+        });
+    });
+
+    let images = document.querySelectorAll(".gallery-images img");
+    images.forEach(img => {
+        img.addEventListener("mouseover", function () {
+            img.style.boxShadow = "0px 0px 10px #ffcc00";
+        });
+        img.addEventListener("mouseleave", function () {
+            img.style.boxShadow = "none";
+        });
+    });
+
+    let navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = "rgba(40, 40, 40, 0.9)";
+        } else {
+            navbar.style.backgroundColor = "#282828";
+        }
+    });
+});
+
+    </script>
+</body>
+
+</html>
